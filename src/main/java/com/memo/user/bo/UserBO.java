@@ -17,4 +17,19 @@ public class UserBO {
 
 	
 	
+	// insert
+	public int addUser(
+			String loginId, String password,
+			String name, String email) {
+		return userMapper.insertUser(loginId, password, name, email);   // mybatis가 성공된 행의 개수 돌려주는 거임.
+		
+	}
+	
+	
+	
+	// select
+	public User getUserByLoginIdPassword(String loginId, String password) {
+		return userMapper.selectUserByLoginIdPassword(loginId, password);
+	}
+	
 }

@@ -15,6 +15,7 @@ public class UserController {
 	 * @param model
 	 * @return
 	 */
+	//http://localhost/user/sign_up_view
 	@GetMapping("/sign_up_view")
 	public String signUpView(Model model) {
 		model.addAttribute("view", "user/signUp");    // 가운데 section 조각페이지 이렇게 세팅해랏 ! 

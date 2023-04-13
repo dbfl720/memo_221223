@@ -15,14 +15,14 @@
 </head>
 <body>
 	<div id="wrap" >
-		<header class="bg-warning">
+		<header>
 		<%-- 상대 경로 (위로 올라가서 경로 찾기 )..을 이용 --%>
 			<jsp:include page="../include/header.jsp" /> <%--  <% .. 위로 올라간다.  %> --%>
 		</header>
 		<section class="contents">
 			<jsp:include page="../${view}.jsp"  />
 		</section>
-		<footer class="bg-warning">
+		<footer>
 			<%-- 절대 경로 (잘 안씀) --%>
 			<jsp:include page="/WEB-INF/jsp/include/footer.jsp"  />
 		</footer>

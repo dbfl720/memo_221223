@@ -62,7 +62,7 @@ $(document).ready(function() {
 	// 중복 확인 버튼 클릭
 	$('#loginIdCheckBtn').on('click', function(){
 		//  경고 문구 초기화
-		$('#idCheckLength').addClass("d-none");     // addClass -    // d-none - 
+		$('#idCheckLength').addClass("d-none");    <%-- addClass -  요소에 클래스를 추가한다   <%-- d-none 클래스: display none (보이지 않게) --%>
 		$('#idCheckDuplicated').addClass("d-none");
 		$('#idCheckOk').addClass("d-none");
 		
@@ -71,7 +71,7 @@ $(document).ready(function() {
 		
 		// 4자 미만이면 경고 문구 노출
 		if (loginId.length < 4) {
-			$('#idCheckLength').removeClass('d-none');   // removeClass - 
+			$('#idCheckLength').removeClass('d-none');   // removeClass - 요소에 클래스를 제거한다
 			return;
 		}
 		
@@ -82,7 +82,7 @@ $(document).ready(function() {
 		
 		// AJAX 통신 - 중복확인
 		$.ajax({
-			// request
+			// request        // *** 요청이 안되면 여기를 봐라!!! 
 				url:"/user/is_duplicated_id"
 				, data:{"loginId":loginId}
 		

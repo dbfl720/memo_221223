@@ -100,6 +100,10 @@ $(document).ready(function() {
 				
 			}
 			
+			,error: function(error) {
+				alert("아이디 중복확인에 실패했습니다. 관리자에게 문의해주세요.");
+			}
+			
 		});
 	});
 	

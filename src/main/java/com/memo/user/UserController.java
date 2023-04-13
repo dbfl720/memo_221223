@@ -15,7 +15,7 @@ public class UserController {
 	 * @param model
 	 * @return
 	 */
-	//http://localhost/user/sign_up_view
+	//localhost/user/sign_up_view
 	@GetMapping("/sign_up_view")
 	public String signUpView(Model model) {
 		model.addAttribute("view", "user/signUp");    // 가운데 section 조각페이지 이렇게 세팅해랏 ! 
@@ -23,5 +23,10 @@ public class UserController {
 	}
 	
 
-	
+	//localhost/user/sign_in_view
+		@GetMapping("/sign_in_view")
+		public String signInView(Model model) {
+			model.addAttribute("view", "user/signIn");    // 가운데 section 조각페이지 이렇게 세팅해랏 ! 
+			return "template/layout";
+		}
 }

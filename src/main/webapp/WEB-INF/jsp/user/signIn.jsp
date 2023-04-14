@@ -32,7 +32,7 @@ $(document).ready(function() {
 		
 		let url = $('#loginForm').attr("action");
 		console.log(url);
-		let params = $('#loginForm').serialize();
+		let params = $('#loginForm').serialize();   // 폼태그에 있는 *** name 속성값들로  파라미터 구성 // Query Ajax로 호출하기 전에 serialize를 해주면 form안에 값들을 한 번에 전송 가능한 data로 만들 수 있어 많은 data를 보낼 때 유용
 		console.log(params);
 		
 		

@@ -52,7 +52,7 @@
 		
 		
 		<select id="selectUserByLoginIdPassword" parameterType="map" resultType="com.memo.user.model.User">
-				SELECT
+			SELECT
 	 			`id`
 	 			,`loginId`
 	 			,`password`

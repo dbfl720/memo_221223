@@ -28,22 +28,22 @@
 				<tr>
 					<th>* 비밀번호</th>
 					<td><input type="password" id="password" name="password"
-						class="form-control" placeholder="비밀번호를 입력하세요."></td>
+						class="form-control" placeholder="비밀번호"></td>
 				</tr>
 				<tr>
 					<th>* 비밀번호 확인</th>
 					<td><input type="password" id="confirmPassword"
-						class="form-control" placeholder="비밀번호를 입력하세요."></td>
+						class="form-control" placeholder="비밀번호 재입력"></td>
 				</tr>
 				<tr>
 					<th>* 이름</th>
 					<td><input type="text" id="name" name="name"
-						class="form-control" placeholder="이름을 입력하세요."></td>
+						class="form-control" placeholder="사용자 이름"></td>
 				</tr>
 				<tr>
 					<th>* 이메일</th>
 					<td><input type="text" id="email" name="email"
-						class="form-control" placeholder="이메일 주소를 입력하세요."></td>
+						class="form-control" placeholder="이메일 주소"></td>
 				</tr>
 			</table>
 			<br>
@@ -108,6 +108,8 @@ $(document).ready(function() {
 	});
 	
 	
+	
+	
 		// 회원가입
 		$('#signUpForm').on('submit', function(e) {  // 멈추고 싶으면 e를 써줌. event  // form태그가 동작 안하게 하고 싶을때 e 붙임
 			e.preventDefault();   // submit 기능 중단  // submit을 쓰면 다음페이지로 넘어감.
@@ -160,14 +162,14 @@ $(document).ready(function() {
 			//$(this)[0].submit();  // this - $('#signUpForm')태그임.   // 임의로 submit 호출(즉 페이지 넘기기)  // UserController(일반 컨트롤러)로 보내야함. - 화면 이동 때문에.. 
 			
 			// 2) AJAX + form태그 활용 case   // RestController 
-			let url = $(this).attr("action");  // this - form태그  // attr - 속성
+			let url = $(this).attr("action");  // this - form태그  // attr - 속성  //action?????????????????????????? 어디서 나타난거지???????????action="/user/sign_up" 인가..?????
 			console.log(url);
-			let params = $(this).serialize();  // 폼태그에 있는 *** name 속성값들로  파라미터 구성
+			let params = $(this).serialize();  // 폼태그에 있는 *** name 속성값들로  파라미터 구성 // Query Ajax로 호출하기 전에 serialize를 해주면 form안에 값들을 한 번에 전송 가능한 data로 만들 수 있어 많은 data를 보낼 때 유용
 			console.log(params);
 			
 			
-			$.post(url, params)	// request
-			.done(function(data) {  // success와 똑같음.
+			$.post(url, params)	// request // ****** 질문 : params는 위에 validation 변수들 ??????
+			.done(function(data) {  // success와 똑같음.  ajax 호출을 만드는 함수의 옵션으로 성공 함수를 전달하는 대신, 함수 자체에서 $.ajax를 반환하고 콜백을 done, fail, then 등으로 바인딩할 수 있다  // ***질문: data는 RestController에서 온 return 값???
 				// response
 				if (data.code == 1) {  // 성공
 					alert("가입을 환영합니다! 로그인을 해주세요.")

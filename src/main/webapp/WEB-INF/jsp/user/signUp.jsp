@@ -3,12 +3,11 @@
 
 <div class="d-flex justify-content-center">
 	<div class="sign-up-box">
-		<h1 class="mb-4">회원가입</h1>
 		<form id="signUpForm" method="post" action="/user/sign_up">
 			<table class="sign-up-table table table-bordered">
-				<tr>
-					<th>* 아이디(4자 이상)<br></th>
+				<tr>		
 					<td>
+					<div class="text-center signUpImage mb-5 ml-3 mt-4"><img alt="이미지2" width="130" height="130" src="data:image/png;base64,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"></div>
 						<%-- 인풋박스 옆에 중복확인을 붙이기 위해 div를 하나 더 만들고 d-flex --%>
 						<div class="d-flex">
 							<input type="text" id="loginId" name="loginId"
@@ -26,30 +25,30 @@
 					</td>
 				</tr>
 				<tr>
-					<th>* 비밀번호</th>
+				
 					<td><input type="password" id="password" name="password"
 						class="form-control" placeholder="비밀번호"></td>
 				</tr>
 				<tr>
-					<th>* 비밀번호 확인</th>
+				
 					<td><input type="password" id="confirmPassword"
 						class="form-control" placeholder="비밀번호 재입력"></td>
 				</tr>
 				<tr>
-					<th>* 이름</th>
+				
 					<td><input type="text" id="name" name="name"
 						class="form-control" placeholder="사용자 이름"></td>
 				</tr>
-				<tr>
-					<th>* 이메일</th>
+				<tr>		
 					<td><input type="text" id="email" name="email"
-						class="form-control" placeholder="이메일 주소"></td>
+						class="form-control" placeholder="이메일 주소">
+	
+					<button type="submit" id="signUpBtn" class="btn btn-primary float-right col-12 mt-5 mb-2">Join</button>		
+					</td>
 				</tr>
 			</table>
 			<br>
 
-			<button type="submit" id="signUpBtn"
-				class="btn btn-primary float-right">회원가입</button>
 		</form>
 	</div>
 </div>

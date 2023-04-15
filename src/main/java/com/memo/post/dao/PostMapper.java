@@ -1,21 +1,30 @@
 package com.memo.post.dao;
 
 import java.util.List;
-import java.util.Map;
 
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
+import com.memo.post.model.Post;
+
 @Repository
 public interface PostMapper {
-
-	public List<Map<String, Object>> selectPostList();
+	// test
+	// public List<Map<String, Object>> selectPostList();
 	
 	
-	
+	// insert할 값만  남기고 나머지는 지우기 (ex, loginId)
+	// ** db와 일치하는 타입과 컬럼명을 적어야 한다. 
 	public int insertPost(
 			@Param("userId") int userId,
 			@Param("subject") String subject,
 			@Param("content") String content,
-			@Param("image")String image);  // 컬럼명과 일치해야하서 바꿔라.
+			@Param("imagePath")String imagePath);  // 컬럼명과 일치해야하서 바꿔라.  // MultipartFile 타입으로 넣을 수 없고 db와 일치한 String으로 넣어야 하기 때문에, String으로 쓰기. 
+
+
+
+
+	
+	// select
+	public List<Post> selectPostList(Integer userId);
 }

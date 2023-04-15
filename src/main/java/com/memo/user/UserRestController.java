@@ -119,10 +119,10 @@ public class UserRestController {
 				result.put("result", "성공");		
 				
 				
-				// ** 질문!! : 왜 getId, getName, getLoginId만 담나요???????????????
+				//(개발자의 입장에서) 세션에 담긴 userName을 여러 jsp에서 바로 사용 가능하다.
 				// 세션에 유저 정보 담기 (로그인 상태 유지) - 로그인만 담아라.  - 서버에 정보 담는 것.  setAttribute(속성명,속성값);속성 추가 하기
 				HttpSession session = request.getSession();		
-				session.setAttribute("userId", user.getId());  // key, value - 내가 지음.
+				session.setAttribute("userId", user.getId());  // key- 내가 지음., value 
 				session.setAttribute("userName", user.getName());
 				session.setAttribute("userLoginId", user.getLoginId());
 			} else {  // 로그인 불가

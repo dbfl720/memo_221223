@@ -1,14 +1,29 @@
 @charset "UTF-8";
 
 
-header {height:100px; background: #d9a7c7;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #fffcdc, #d9a7c7);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #fffcdc, #d9a7c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+header {height:100px; background: #ddd6f3;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #faaca8, #ddd6f3);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #faaca8, #ddd6f3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
+/* headerLogo */
+.headerLogo:hover{text-decoration: none; color:#9A2EFE;}
+.headerLogo{color:black;}
+.signUpImage{margin-right:20px;}
+
+/* headerText */
+.loginText {font-size: 20px; color:black; margin-top:8px;}
+.loginText:hover{text-decoration: none; color:#9A2EFE; }
+.createUserName{color:#9A2EFE; font-size:30px;}
+.createUserName2{margin-top:15px; margin-left:4px;}
+.signOutText{font-size:20px;}
+
+
 .contents {min-height:780px; margin-top:150px;}
 #loginIdCheckBtn{width:170px; height:40px;}
-footer {height:100px; background: #d9a7c7;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #fffcdc, #d9a7c7);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #fffcdc, #d9a7c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+footer {height:100px; background: #ddd6f3;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #faaca8, #ddd6f3);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #faaca8, #ddd6f3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 

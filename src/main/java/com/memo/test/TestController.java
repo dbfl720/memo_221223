@@ -43,11 +43,11 @@ public class TestController {
 	 }
 	
 	
-	@ResponseBody //웹 주소로 요청하면, 웹사이트 View 화면이 아닌 json 같은 데이터를 응답값으로 보내준다. 
-	@RequestMapping("/test4")
-	public List<Map<String, Object>> test4() {
-		return postMapper.selectPostList();
-	}
+//	@ResponseBody //웹 주소로 요청하면, 웹사이트 View 화면이 아닌 json 같은 데이터를 응답값으로 보내준다. 
+//	@RequestMapping("/test4")
+//	public List<Map<String, Object>> test4() {
+//		return postMapper.selectPostList();
+//	}
 	
 	
 }

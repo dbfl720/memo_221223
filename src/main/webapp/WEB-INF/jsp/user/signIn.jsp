@@ -7,7 +7,7 @@
 				<div class="justify-content-center d-flex"><input id="loginId" name="loginId"  type="text" class="form-control col-4 mb-3 " placeholder="아이디를 입력하세요."></div>
 				<div class="justify-content-center d-flex"><input id="password" name="password" type="password" class="form-control col-4 mb-3" placeholder="비밀번호를 입력하세요."></div>
 				<div><button id="loginBtn" name="loginBtn" type="button" class="btn btn-primary col-4 mb-3">LOGIN</button></div>
-				<div><button id="joinBtn" name="joinBtn" type="button" class="btn btn-primary col-4">JOIN</button></div>
+				<div><a href="/user/sign_up_view"><button id="joinBtn" name="joinBtn" type="button" class="btn btn-secondary col-4">JOIN</button></a></div>
 			</form>
 	</div>
 <script>
@@ -36,7 +36,7 @@ $(document).ready(function() {
 		console.log(params);
 		
 		
-		
+		// ** $.post~ 방식은 간단하고 작은 파일 할 때만 사용.
 		$.post(url, params) // request
 		.done(function(data) {  // response
 			if (data.code == 1) {

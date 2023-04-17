@@ -26,7 +26,7 @@ public class PostRestController {
 	@PostMapping("/create")
 	public Map<String, Object> create(
 			@RequestParam("subject") String subject,
-			@RequestParam(value="content", required=false) String content, // 비필수
+			@RequestParam("content") String content, 
 			@RequestParam(value="file", required=false) MultipartFile file,  // 비필수
 			HttpSession session) {    // 유저정보는 중요하고 파라미터로 주고받으면 안되기 때문에, session통해서 꺼내기! 
 		

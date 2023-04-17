@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import com.memo.post.model.Post;
 
-@Repository
+@Repository  // @Repository 어노테이션으로 Spring Bean을 만든다.
 public interface PostMapper {
 	// test
 	// public List<Map<String, Object>> selectPostList();

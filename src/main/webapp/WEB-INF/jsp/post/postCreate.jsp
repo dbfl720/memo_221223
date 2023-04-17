@@ -6,7 +6,7 @@
 		<input type="text" id="subject" class="form-control" placeholder="제목을 입력하세요.">
 		<textarea rows="10" class="form-control" id="content" placeholder="글 내용을 입력하세요."></textarea>
 		<div class="d-flex justify-content-end my-3">   <%-- mx, my 검색!  --%>
-			<input type="file" id="file" accept=".jpg, .jpeg, .png, .gif"> <%-- 확장자 선택 가능 : accept=".jpg, .jpeg, .png, .gif" --%>
+			<input type="file" id="file" multiple='multiple' accept=".jpg, .jpeg, .png, .gif"> <%-- 확장자 선택 가능 : accept=".jpg, .jpeg, .png, .gif" --%>
 		</div>
 		
 		<div class="d-flex justify-content-between">
@@ -88,9 +88,9 @@ $(document).ready(function() {
 			type:"POST"  // 이미지 때문에 post,커다란 파일 post
 			, url:"/post/create"
 			, data:formData   // formData 함수가 RequestBody 알아서 채워서 보내준다. 
-			, enctype:"multipart/form-data"  // **이미지를 보낼때는 반드시 있어야한다.  // 파일 업로드를 위한 필수 설정.
-			, processData:false  // string이 아니라는 정보 - false // 파일 업로드를 위한 필수 설정.
-			, contentType:false // 파일 업로드를 위한 필수 설정.
+			, enctype:"multipart/form-data"  // 파일 업로드를 위한 필수 설정.   // **이미지를 보낼때는 반드시 있어야한다.  
+			, processData:false  			// 파일 업로드를 위한 필수 설정.     // string이 아니라는 정보 - false 
+			, contentType:false            // 파일 업로드를 위한 필수 설정.
 			
 			// response
 			, success:function(data){

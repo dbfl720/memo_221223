@@ -34,7 +34,7 @@ public class PostRestController {
 		// **** 3333333 session값이 잘 꺼내지는  check ****
 		// 세션에서 유저 정보 꺼내옴
 		int userId = (int)session.getAttribute("userId");  // 로그인할때 세팅했던 것  - userId //  **** breakpoint
-		String userLoginId = (String)session.getAttribute("userLoginId");  // .getAttribute()는 선택한 요소(element)의 특정 속성(attribute)의 값을 가져옵니다.
+		String userLoginId = (String)session.getAttribute("userLoginId");  // 이미지업로드할때 필요해서 가져옴 // .getAttribute()는 선택한 요소(element)의 특정 속성(attribute)의 값을 가져옵니다.
 		
 		// db insert
 		int rowCount = postBO.addPost(userId, userLoginId, subject, content, file);

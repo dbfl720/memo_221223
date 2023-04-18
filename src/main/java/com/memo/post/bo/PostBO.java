@@ -42,4 +42,10 @@ public class PostBO {
 	public List<Post> getPostList(Integer userId) {
 			return postMapper.selectPostList(userId);
 	}
+	
+	
+	// output:Post(하나의 행)       input:postId, userId
+	public Post getPostByPostIdUserId(int postId, int userId) {
+		return postMapper.selectPostByPostIdUserId(postId, userId); // 순서 맞는지 체크 .
+	}
 }

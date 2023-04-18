@@ -20,7 +20,7 @@
 			<c:forEach items="${postList}" var="postLists">
 				<tr>
 					<td>${postLists.id}</td>
-					<td>${postLists.subject}</td>
+					<td><a href="/post/post_detail_view?postId=${postLists.id}">${postLists.subject}</a></td>
 					<td>${postLists.content}</td>
 					<td>${postLists.updatedAt}</td>
 				</tr>

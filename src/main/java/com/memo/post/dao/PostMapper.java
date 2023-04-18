@@ -27,4 +27,9 @@ public interface PostMapper {
 	
 	// select
 	public List<Post> selectPostList(Integer userId);
+	
+	
+	public Post selectPostByPostIdUserId(
+			@Param("postId") int postId,
+			@Param("userId") int userId);  // xml 쿼리문에서 "userId" 내려감. #{postId}
 }

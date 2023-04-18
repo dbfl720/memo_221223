@@ -23,7 +23,7 @@ public class FileManagerService {
 		String filePath = FILE_UPLOAD_PATH + directoryName; ///Users/hongyuri/Desktop/메가스터디 IT/Spring_project/memo/workspace///aaaa_167093485(현재시간)/
 	
 		File directory = new File(filePath);
-		if (directory.mkdir() == false) {  // ** breakpoint
+		if (directory.mkdir() == false) {  // ** breakpoint  // mkdir() - 디렉토리 생성할 경우 사용되는 명령어
 			return null;  // 폴더 만드는데 실패 시 이미지경로는 null 
 		}
 		

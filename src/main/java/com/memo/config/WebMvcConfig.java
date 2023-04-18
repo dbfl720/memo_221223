@@ -11,7 +11,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
 	
 	// 서버에 업로드 된 이미지와 웹 이미지 주소와의 맵핑 설정
 	@Override
-	public void addResourceHandlers(ResourceHandlerRegistry registry) {
+	public void addResourceHandlers(ResourceHandlerRegistry registry) {  // 리소스를 관리해주는 객체
 		registry
 		.addResourceHandler("/images/**") // 웹 이미지 주소  http://localhost/images/yuri_1681728082266/amsterdam-7917858_1280.jpg
 		.addResourceLocations("file://" + FileManagerService.FILE_UPLOAD_PATH);  // 실제 파일 위치  - mac은 // 슬래시 2개 . - 개수 틀리면 404 // **과 연동 되면서 되는 것임.

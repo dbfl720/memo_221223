@@ -5,7 +5,9 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <div class="d-flex justify-content-center">
 	<div class="w-50">  <%-- width값 50프로. --%>
-		<h1>글 목록</h1>
+		<div class="mb-3">
+			<img width="60" height="60" alt="header이미지" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYLwP2AGFo9E5h4dxl854Fj0jrTtGA8FUsYyD5Z5oR88F10W0G8WkwmmixTIaeEpRLAMU&usqp=CAU">
+		</div>
 		
 		<table class="table">
 			<thead>
@@ -20,9 +22,9 @@
 			<c:forEach items="${postList}" var="postLists">
 				<tr>
 					<td>${postLists.id}</td>
-					<td><a href="/post/post_detail_view?postId=${postLists.id}">${postLists.subject}</a></td>
-					<td>${postLists.content}</td>
-					<td>${postLists.updatedAt}</td>
+					<td><a href="/post/post_detail_view?postId=${postLists.id}" class="memoSubject">${postLists.subject}</a></td>
+					<td><fmt:formatDate value="${postLists.createdAt}" pattern="yyyy년 M월 d일" /></td>
+					<td><fmt:formatDate value="${postLists.updatedAt}" pattern="yyyy년 M월 d일" /></td>
 				</tr>
 			</c:forEach>
 			</tbody>

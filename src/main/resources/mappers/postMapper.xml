@@ -17,6 +17,7 @@
 			`post`
 		WHERE
 			`userId` = #{userId}
+		ORDER BY `id` DESC;
  	
  	</select>
  		
@@ -62,6 +63,7 @@
 		WHERE
 			`id` = #{postId}
 			AND `userId` = #{userId}
+		ORDER BY `id` DESC;
 	</select>
 
  </mapper>

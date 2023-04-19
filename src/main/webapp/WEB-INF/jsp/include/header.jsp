@@ -7,7 +7,7 @@
     <%-- logo --%>
     <c:if test="${not empty userId}">
 	    <div>
-		<h1 class="font-weight-bold ml-4"><a href="/post/post_list_view" class="headerLogo ">MEMO 게시판</a></h1>
+		<h1 class="font-weight-bold ml-4"><a href="/post/post_list_view" class="headerLogo ">Hong_Diary</a></h1>
 	    </div>
     </c:if>
     <c:if test="${empty userId}">

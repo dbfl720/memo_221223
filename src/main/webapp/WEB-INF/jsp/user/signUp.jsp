@@ -13,7 +13,7 @@
 							<input type="text" id="loginId" name="loginId"
 								class="form-control col-9" placeholder="아이디를 입력하세요.">
 							<button type="button" id="loginIdCheckBtn"
-								class="btn btn-success ml-2 ">중복확인</button>
+								class="btn btn-light ml-2 ">중복확인</button>
 							<br>
 						</div> <%-- 아이디 체크 결과 --%> <%-- d-none 클래스: display none (보이지 않게) --%>
 						<div id="idCheckLength" class="small text-danger d-none">ID를
@@ -43,7 +43,7 @@
 					<td><input type="text" id="email" name="email"
 						class="form-control" placeholder="이메일 주소">
 	
-					<button type="submit" id="signUpBtn" class="btn btn-primary float-right col-12 mt-5 mb-2">Join</button>		
+					<button type="submit" id="signUpBtn" class="btn btn-secondary float-right col-12 mt-5 mb-2">Join</button>		
 					</td>
 				</tr>
 			</table>

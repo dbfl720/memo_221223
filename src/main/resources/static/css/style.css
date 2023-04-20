@@ -1,53 +1,68 @@
 @charset "UTF-8";
 
 
-header {height:100px; background: #3E5151;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #DECBA4, #3E5151);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #DECBA4, #3E5151); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+header {height:100px; background: #000000;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
 
 /* headerLogo */
 .headerLogo:hover{text-decoration: none; color:white;}
-.headerLogo{color:black;}
+.headerLogo{color:#FFB900;}
 .signUpImage{margin-right:20px; background-color:transparent;}
 
 /* headerText */
-.loginText {font-size: 20px; color:black; margin-top:8px;}
+.loginText {font-size: 20px; color:#FFB900; margin-top:8px;}
 .loginText:hover{text-decoration: none; color:white; }
-.createUserName{color:black; font-size:30px;}
+.createUserName{color:#FFB900; font-size:30px;}
 .createUserName2{margin-top:15px; margin-left:4px;}
 .signOutText{font-size:20px;}
 
 
 
 /* section  */
-section{background: #3E5151;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #DECBA4, #3E5151);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #DECBA4, #3E5151); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+section{background: #000000;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
 
 /* 글 상세/수정 */
 .imageMemo{background-color: rgba( 255, 255, 255, 0.5 ); }
+.postDetailBox{padding-top:180px;}
+.imgDetail{filter: invert(82%);}
 
 
 /* 글 목록  */
 .memoSubject:hover{text-decoration: none;  color:black;}
 .memoSubject{color:#AEB404;}
+.postListImg{filter: invert(82%);}
+.postListBox{padding-top:150px;}
+
+
+/* 글쓰기 */
+.postCreateBox{padding-top:150px; }
+.postCreatImg{filter: invert(82%);}
+
+
+/* signIn */
+#loginImg{  filter: invert(88%);}
+.signInBigBox{filter: invert(88%);}
+.loginText{padding-top:100px; padding-right:200px; font-size:30px;}
+.loginNameAndText{padding-top:600px;}
 
 
 
-
-
-
+/* signUp */
+.signUpimg{filter: invert(88%); }
+.signUpBox{padding-top:150px; }
 
 .contents {min-height:700px; }
 #loginIdCheckBtn{width:170px; height:40px;}
-footer {height:100px; background: #3E5151;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #DECBA4, #3E5151);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #DECBA4, #3E5151); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+footer {height:190px;background: #000000;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 
 

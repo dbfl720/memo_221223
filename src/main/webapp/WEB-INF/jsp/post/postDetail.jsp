@@ -1,12 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<div class="d-flex justify-content-center">
+<div class="d-flex justify-content-center postDetailBox">
 	
 		<%-- 이미지가 있을 때만 이미지 영역 추가 --%>
 		<c:if test="${not empty post.imagePath}"> <%-- not empty는 null도 체크함. --%>
 			<div class="imageMemo mr-3 ">
-				<img src="${post.imagePath}" alt="업로드 된 이미지" width="400" height="500">
+				<img src="${post.imagePath}" alt="업로드 된 이미지" width="400" height="450">
 			</div>
 		</c:if>
 	
@@ -22,11 +22,11 @@
 		<%-- 삭제, 파일선택, 목록, 수정 --%>
 		<div class="d-flex justify-content-between mt-2">
 			<div class="d-flex justify-content-end ">   <%-- mx, my 검색!  --%>
-				<button type="button" id="postDeleteBtn" class="btn btn-secondary">삭제</button>
-				<div><input class="ml-1 mt-2" type="file" id="file" multiple='multiple' accept=".jpg, .jpeg, .png, .gif"></div> <%-- 확장자 선택 가능 : accept=".jpg, .jpeg, .png, .gif" --%>
+				<button type="button" id="postDeleteBtn" class="btn btn-light">삭제</button>
+				<div><input class="ml-1 mt-2 text-light" type="file" id="file" multiple='multiple' accept=".jpg, .jpeg, .png, .gif"></div> <%-- 확장자 선택 가능 : accept=".jpg, .jpeg, .png, .gif" --%>
 			</div>
 			<div>
-				<a href="/post/post_list_view" class="btn btn-dark">목록</a>
+				<a href="/post/post_list_view" class="btn btn-light">목록</a>
 				<button type="button" id="saveBtn" class="btn btn-warning">수정</button>
 			</div>
 		</div>

@@ -11,7 +11,7 @@ background: linear-gradient(to right, #DECBA4, #3E5151); /* W3C, IE 10+/ Edge, F
 /* headerLogo */
 .headerLogo:hover{text-decoration: none; color:white;}
 .headerLogo{color:black;}
-.signUpImage{margin-right:20px;}
+.signUpImage{margin-right:20px; background-color:transparent;}
 
 /* headerText */
 .loginText {font-size: 20px; color:black; margin-top:8px;}
@@ -43,7 +43,7 @@ background: linear-gradient(to right, #DECBA4, #3E5151); /* W3C, IE 10+/ Edge, F
 
 
 
-.contents {min-height:780px; margin-top:150px;}
+.contents {min-height:700px; }
 #loginIdCheckBtn{width:170px; height:40px;}
 footer {height:100px; background: #3E5151;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #DECBA4, #3E5151);  /* Chrome 10-25, Safari 5.1-6 */

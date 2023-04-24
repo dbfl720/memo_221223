@@ -17,8 +17,12 @@
     </c:if>
     
     <%-- 로그인 정보 --%>
-    <c:if test="${not empty userId}">
-    	<div class="d-flex font-weight-bold loginNameAndText"><div class=" createUserName font-weight-bold">${userName}</div><div class="createUserName2 text-warning">님 안녕하세요.</div><a href="/user/sign_out" class="loginText ml-5 mr-5">Logout</a></div> 
+     <c:if test="${not empty userId}">
+    	<div class="d-flex font-weight-bold loginNameAndText">
+	    	<div class=" createUserName font-weight-bold d-flex">${userName}</div>
+	    	<div class="createUserName2 text-warning">님 안녕하세요.</div>
+	    	<div><a href="/user/sign_out" class="loginText ml-5 mr-5">Logout</a></div>
+    	</div> 
      </c:if>
      <c:if test="${empty userId}">
      	<a href="/user/sign_in_view" class="loginText font-weight-bold mr-5">Login</a>

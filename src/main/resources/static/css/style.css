@@ -18,6 +18,7 @@ background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, F
 .createUserName{color:#FFB900; font-size:30px;}
 .createUserName2{margin-top:15px; margin-left:4px;}
 .signOutText{font-size:20px;}
+.loginNameAndText{margin-top:200px; margin-left:300px;}
 
 
 
@@ -50,7 +51,7 @@ background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, F
 #loginImg{  filter: invert(88%);}
 .signInBigBox{filter: invert(88%);}
 .loginText{padding-top:100px; padding-right:200px; font-size:30px;}
-.loginNameAndText{padding-top:600px;}
+
 
 
 

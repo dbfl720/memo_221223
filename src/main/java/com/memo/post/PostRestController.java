@@ -5,6 +5,7 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,6 +22,14 @@ public class PostRestController {
 	
 	@Autowired private PostBO postBO;
 	
+	/**
+	 * 메모 글쓰기 API
+	 * @param subject
+	 * @param content
+	 * @param file
+	 * @param session
+	 * @return
+	 */
 	// ************** 2222222222. AJAX - request를 여기서 수행. (***AJAX에서 파라미터명과 일치해야함)
 	// **** 222222222 파라미터가 잘 넘어오고  있는지  check ****
 	@PostMapping("/create")
@@ -49,6 +58,34 @@ public class PostRestController {
 			result.put("code", 500);
 			result.put("errorMessage", "메모를 저장하지 못했습니다.");		
 		}
+		return result;
+	}
+	
+	
+	
+	@PutMapping("/update")
+	public Map<String, Object> update(
+			@RequestParam("postId") int postId,
+			@RequestParam("subject") String subject,
+			@RequestParam("content") String content, 
+			@RequestParam(value="file", required=false) MultipartFile file,  // 비필수
+			HttpSession session) {
+			
+		
+		// 세션 정보 꺼내옴
+		int userId = (int)session.getAttribute("userId");  // ** breakpoint
+		String userLoginId = (String)session.getAttribute("userLoginId");
+		
+		
+		// update db
+		postBO.updatePost(userId, userLoginId, postId, subject, content, file);
+		
+		
+		// 응답
+		Map<String, Object> result = new HashMap<>();
+		result.put("code", 1);
+		result.put("result", "성공");
+		
 		return result;
 	}
 }

@@ -32,4 +32,11 @@ public interface PostMapper {
 	public Post selectPostByPostIdUserId(
 			@Param("postId") int postId,
 			@Param("userId") int userId);  // xml 쿼리문에서 "userId" 내려감. #{postId}
+	
+	
+	public void updatePostByPostId(
+			@Param("postId") int postId,  // @Param("postId")  애랑 매핑이 되는 거임 ***
+			@Param("subject") String subject,
+			@Param("content") String content,
+			@Param("imagePath") String imagePath);
 }

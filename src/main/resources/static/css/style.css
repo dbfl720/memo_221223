@@ -48,8 +48,8 @@ background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, F
 
 
 /* signIn */
-#loginImg{  filter: invert(88%);}
-.signInBigBox{filter: invert(88%);}
+#loginImg{  filter: invert(0%);}
+.signInBigBox{ filter: invert(88%); padding-top:180px;}
 .loginText{padding-top:100px; padding-right:200px; font-size:30px;}
 
 

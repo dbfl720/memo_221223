@@ -14,7 +14,7 @@ import org.springframework.web.multipart.MultipartFile;
 @Component// 특정한 역할(일반적인)을 하지 않은  조상 spring bean.  // BO(x), Mapper(x), Controller(x), 
 public class FileManagerService { 
 
-	private Logger logger = LoggerFactory.getLogger(this.getClass());
+	private Logger logger = LoggerFactory.getLogger(this.getClass());  // Mybatis 임포트문  제거. 
 	
 	
 	// 실제 업로드 된 이미지가 저장될 경로 (서버)
@@ -56,9 +56,10 @@ public class FileManagerService {
 		 // /Users/hongyuri/Desktop/메가스터디 IT/Spring_project/memo/workspace/images/aaaa_167093485/sun.png
 		 // 겹치는 images 경로를 제거 -  imagePath 안에 있는 / images/ 구문 제거 
 		 Path path = Paths.get(FILE_UPLOAD_PATH + imagePath.replace("/images/", ""));  // replace 문법 사용.구문 제거.
+		 
 		 // 이미지 삭제
-		 if (Files.exists(path)) {
-			 try {
+		 if (Files.exists(path)) { // exists() 메소드 - 파일이 존재하는가? 
+			 try { // try-catch : 여기서 책임진다.
 				Files.delete(path);
 			} catch (IOException e) {
 				logger.error("[이미지 삭제] 이미지 삭제 실패. imagePath:{}", imagePath);
@@ -69,12 +70,12 @@ public class FileManagerService {
 		 
 		 
 		 // 디렉토리(폴더) 삭제
-		 path = path.getParent();  // 이미지 폴더 부모 
-		 if (Files.exists(path)) {
+		 path = path.getParent();  // getParent() - 이미지 폴더 부모 가리킨다.
+		 if (Files.exists(path)) {  // exists()  - 존재 여부 메소드.
 			 try {
-				Files.delete(path);
+				Files.delete(path); // delete() - 삭제 메소드.
 			} catch (IOException e) {
-				logger.error("[이미지 삭제] 디렉토리 삭제 실패. imagePath:{}", imagePath);
+				logger.error("[이미지 삭제] 디렉토리 삭제 실패. imagePath:{}", imagePath); // 로거 레벨 내가 지정 - error
 			}
 		 }
 	}

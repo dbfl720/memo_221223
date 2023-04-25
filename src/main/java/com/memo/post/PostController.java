@@ -66,7 +66,13 @@ public class PostController {
 	
 	
 	
-	
+	/**
+	 * 글 목록 화면
+	 * @param postId
+	 * @param session
+	 * @param model
+	 * @return
+	 */
 	@GetMapping("/post_detail_view")
 	public String postDetailView(
 			@RequestParam("postId") int postId,

@@ -80,7 +80,19 @@
 			, `imagePath` = #{imagePath}
 			</if>
 		WHERE
-			`id` = #{postId}
+			`id` = #{postId}   <!-- id: 컬럼명 아이디.  postId: Mapper에 파라미터에서 넘어온 것. -->
 	</update>
+	
+	
+	
+	
+	<delete id="deletePostByPostIdUserId" parameterType="map">
+		DELETE
+		FROM
+			`post`
+		WHERE
+			`id` = #{postId}
+			AND `userId` = #{userId}
+	</delete>
 
  </mapper>

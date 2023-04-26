@@ -25,10 +25,8 @@ public interface PostMapper {
 
 
 	
+	
 	// select
-	public List<Post> selectPostList(Integer userId);
-	
-	
 	public Post selectPostByPostIdUserId(
 			@Param("postId") int postId,
 			@Param("userId") int userId);  // xml 쿼리문에서 "userId" 내려감. #{postId}
@@ -51,4 +49,15 @@ public interface PostMapper {
 	
 	
 	
+	// select
+	public List<Post> selectPostListByUserId(
+			@Param("userId") int userId,
+			@Param("direction") String direction,
+			@Param("standardId") Integer standardId,
+			@Param("limit") int limit);
+	
+	// select
+	public int selectPostIdByUserIdSort(
+			@Param("userId") int userId,
+			@Param("sort") String sort);  // sort- 이름 내가 지음.
 }

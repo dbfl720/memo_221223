@@ -31,7 +31,7 @@
 			AND `id` > #{standardId}
 			]]>
 			</if>
- 		LIMIT ${limit}   
+ 			LIMIT ${limit}   
  	</select>
  		
  		

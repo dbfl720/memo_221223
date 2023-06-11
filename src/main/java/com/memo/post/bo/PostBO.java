@@ -144,6 +144,7 @@ public class PostBO {
 				
 				// return 결과 => 메소드 종료
 				return postList;
+				
 			} else if (nextId != null) {  // 다음
 				direction = "next";
 				standardId = nextId;

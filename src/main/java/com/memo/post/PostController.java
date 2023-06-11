@@ -65,7 +65,7 @@ public class PostController {
 		
 		
 		model.addAttribute("prevId", prevId);		
-		model.addAttribute("nextId", nextId );		
+		model.addAttribute("nextId", nextId);		
 		// 로그인 되면 이동
 		model.addAttribute("postList", postList);
 		model.addAttribute("view", "post/postList");   // "post/postList" - jps 경로
@@ -91,7 +91,7 @@ public class PostController {
 	
 	
 	/**
-	 * 글 목록 화면
+	 * 글 디테일 화면
 	 * @param postId
 	 * @param session
 	 * @param model
